@@ -600,108 +600,11 @@
     
 
     
-<!--  Added by GoogleAnalytics4 integration -->
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-
-if (!window._hsGoogleConsentRunOnce) {
-  window._hsGoogleConsentRunOnce = true;
-
-  gtag('consent', 'default', {
-    'ad_storage': 'denied',
-    'analytics_storage': 'denied'
-  });
-
-  var _hsp = window._hsp = window._hsp || [];
-
-  _hsp.push(['addPrivacyConsentListener', function(consent){
-    var hasAnalyticsConsent = consent && (consent.allowed || (consent.categories && consent.categories.analytics));
-    var hasAdsConsent = consent && (consent.allowed || (consent.categories && consent.categories.advertisement));
-
-    gtag('consent', 'update', {
-      'ad_storage': hasAdsConsent ? 'granted' : 'denied',
-      'analytics_storage': hasAnalyticsConsent ? 'granted' : 'denied'
-    });
-  }]);
-}
-
-gtag('js', new Date());
-gtag('set', 'developer_id.dZTQ1Zm', true);
-gtag('config', 'G-69KHXCX3PY');
-</script>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-69KHXCX3PY"></script>
-<!-- /Added by GoogleAnalytics4 integration -->
-
-<!--  Added by GoogleTagManager integration -->
-<script>
-var _hsp = window._hsp = window._hsp || [];
-
-var hsLoadGtm = function loadGtm() {
-    if(window._hsGtmLoadOnce) {
-      return;
-    }
-
-    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-TNSFR88');
-
-    window._hsGtmLoadOnce = true;
-};
-
-var useGoogleConsentMode = false;
-
-if (!useGoogleConsentMode){
-    _hsp.push(['addPrivacyConsentListener', function(consent){
-      if(consent.allowed || (consent.categories && consent.categories.analytics)){
-        hsLoadGtm();
-      }
-  }]);
-} else{
-    if(!window._hsGoogleConsentRunOnce){
-      window._hsGoogleConsentRunOnce=true;
-
-      window.dataLayer=window.dataLayer||[];
-      function gtag(){dataLayer.push(arguments);}
-
-      gtag('consent','default',{
-        'ad_storage':'denied',
-        'analytics_storage':'denied'
-      });
-
-      gtag('set','developer_id.dZTQ1Zm',true);
-
-      _hsp.push(['addPrivacyConsentListener',function(consent){
-      var hasAnalyticsConsent=consent&&(consent.allowed||(consent.categories&&consent.categories.analytics));
-      var hasAdsConsent=consent&&(consent.allowed||(consent.categories&&consent.categories.advertisement));
-
-      gtag('consent','update',{
-        'ad_storage':hasAdsConsent?'granted':'denied',
-        'analytics_storage':hasAnalyticsConsent?'granted':'denied'
-      });
-    }]);
-  }
-
-  hsLoadGtm();
-}
-</script>
-
-<!-- /Added by GoogleTagManager integration -->
 
     <link rel="canonical" href="https://ydata.ai">
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-69KHXCX3PY"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-69KHXCX3PY');
-</script>
 <meta property="og:image" content="https://ydata.ai/hubfs/YData_FB_profile_white.png#keepProtocol">
 <meta property="og:image:width" content="800">
 <meta property="og:image:height" content="800">
