@@ -672,7 +672,9 @@ display: block !important;
                   <!--end row-wrapper -->
 
                   </div><!--end widget-span -->
-                  <div class="span6 widget-span widget-type-cell cell_1676565587510-vertical-alignment dnd-column" style="" data-widget-type="cell" data-x="6" data-w="6">
+
+
+                  <!-- <div class="span6 widget-span widget-type-cell cell_1676565587510-vertical-alignment dnd-column" style="" data-widget-type="cell" data-x="6" data-w="6">
 
                   <div class="row-fluid-wrapper row-depth-1 row-number-5 dnd-row">
                   <div class="row-fluid ">
@@ -688,14 +690,128 @@ display: block !important;
                                   </span>
                                 </div>
                                   <br/><br><br/>
-                  <div id="hs_form_target_form_907986431"></div>
+                  <div id="hs_form_target_form_907986431"></div> -->
 
 
 
 
 
+                  <style>
+                    #success-message {
+                      display: none;
+                      background-color: white;
+                      color: black;
+                      padding: 20px;
+                      border-radius: 5px;
+                      text-align: center;
+                    }
+                  
+                    .success-text {
+                      color: black;
+                      font-weight: bold;
+                    }
+                  
+                    .hidden {
+                      display: none;
+                    }
+                  
+                    .success-message {
+                      background-color: white;
+                      color: black;
+                      padding: 20px;
+                      border-radius: 5px;
+                      text-align: center;
+                    }
+                  </style>
+                  
+                  
+                  <div id="form-container">
+                    <div class="row-fluid-wrapper row-depth-1 row-number-19 dnd_area-row-6-padding dnd-section">
+                      <div class="row-fluid">
+                        <div class="span12 widget-span widget-type-cell dnd-column" style="" data-widget-type="cell" data-x="0" data-w="17">
+                          <div class="row-fluid-wrapper row-depth-1 row-number-20 dnd-row">
+                            <div class="row-fluid">
+                              <div class="span12 widget-span widget-type-custom_widget dnd-module" style="" data-widget-type="custom_widget" data-x="0" data-w="12">
+                                <div id="hs_cos_wrapper_widget_1669372618387" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module">
+                                  <div id="form" class="main-form rtp rbp">
+                                    <div class="content-wrapper">
+                                      <h3 class="tc">Send message, we will get back.</h3>
+                                      <div class="innerform">
+                                        <form id="contact-form" action="/submit-form" method="POST">
+                                          <div class="form-group">
+                                            <label for="name">Name:</label>
+                                            <input type="text" placeholder="Please Enter your name" id="name" name="name" class="form-control" required>
+                                          </div>
+                                          <div class="form-group">
+                                            <label for="company">Company Name:</label>
+                                            <input type="text" placeholder="Please Enter your Company Info" id="company" name="company" class="form-control" required>
+                                          </div>
+                                          <div class="form-group">
+                                            <label for="email">Email:</label>
+                                            <input type="email" placeholder="Please Enter your Email" id="email" name="email" class="form-control" required>
+                                          </div>
+                                          <div class="form-group">
+                                            <label for="message">Message:</label>
+                                            <textarea id="message" placeholder="Please Share your message" name="message" class="form-control" rows="5" required></textarea>
+                                          </div>
+                                          <br/>
+                                          <div class="form-group">
+                                            <button type="submit" class="btn btn-primary">Submit</button>
+                                          </div>
+                                        </form>
+                                        <div id="success-message" class="hidden">
+                                          <p class="success-text">Message sent successfully!</p>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                        
+                
 
+                  <script>
+                    document.addEventListener('DOMContentLoaded', function() {
+                      const form = document.getElementById('contact-form');
+                      const successMessage = document.getElementById('success-message');
+                      const formContainer = document.getElementById('form-container');
+                  
+                      form.addEventListener('submit', function(event) {
+                        event.preventDefault(); // Prevent the default form submission
+                  
+                        const formData = new FormData(form);
+                  
+                        fetch('http://16.171.147.129/submit-form', {
+                          method: 'POST',
+                          body: formData
+                        })
+                        .then(response => response.json())
+                        .then(data => {
+                          if (data.success) {
+                            formContainer.innerHTML = `
+                              <div class="success-message">
+                                <p class="success-text">Message sent successfully!</p>
+                              </div>
+                            `;
+                          } else {
+                            // Handle errors if necessary
+                          }
+                        })
+                        .catch(error => {
+                          console.error('Error:', error);
+                        });
+                      });
+                    });
+                  </script>
+                  
 
+                  
 
 
 </span>
@@ -721,6 +837,14 @@ display: block !important;
 </div>
 
     </main>
+
+    
+    <br/>                                  
+    <br/>
+    <br>
+    <br/>
+
+    <br/>
 
  
 
